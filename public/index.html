@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      href="light-favicon.png"
+      rel="shortcut icon"
+      type="image/png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      href="dark-favicon.png"
+      rel="shortcut icon"
+      type="image/png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="https://css.imuhammadosama.com/style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FF2RKTX8GF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-FF2RKTX8GF');
+    </script>
+    <!-- Hotjar Tracking Code for ScrollReddit -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3286724, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <title>Scroll Reddit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // select the favicon 👉
+      const faviconEl = document.querySelector('link[rel="shortcut icon"]');
+
+      // watch for changes 🕵️
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', themeChange);
+
+      // listener 👂
+      function themeChange(event) {
+        if (event.matches) {
+          faviconEl.setAttribute('href', 'favicon-dark.png');
+        } else {
+          faviconEl.setAttribute('href', 'favicon-light.png');
+        }
+      }
+    </script>
+  </body>
+</html>

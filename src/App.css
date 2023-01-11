@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/gilroy.woff') format('woff');
+  font-weight: normal;
+}
+:root {
+  --font: 'Gilroy';
+  --background-dark: #1a1a1a;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-dark);
+  }
+  .text {
+    color: white;
+  }
+}
+
+.text {
+  font-family: var(--font);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 100% !important;
+  }
+}
+
+.column {
+  flex: 20%;
+  padding: 0 4px;
+}
+
+.column video {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.column img {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+button {
+  background-color: #252525;
+  cursor: pointer;
+  color: white;
+  font-family: var(--font);
+  font-size: 16px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+#back-to-top {
+  text-decoration: none;
+  position: fixed;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 16px;
+  right: 10px;
+  bottom: 10px;
+  font-family: var(--font);
+  background-color: #252525;
+  color: white;
+  border-radius: 10px;
+}

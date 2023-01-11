@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/subreddits",
+      "destination": "https://www.reddit.com/subreddits/search?q=beauty&include_over_18=on",
+      "permanent": true
+    }
+  ]
+}
