@@ -20,7 +20,7 @@ export default function () {
   const [postType, setPostType] = useState('All');
   const [loading, setLoading] = useState(false);
   const [moreLoading, setMoreLoading] = useState(false);
-
+  const [sfw, setSfw] = useState('off');
   let pageNumber = 1;
   let count = 0;
   let itemsNumber = 96 / columns;
@@ -50,7 +50,7 @@ export default function () {
 
   const getSubReddits = async (value) => {
     const searchItems = await axios.get(
-      `https://www.reddit.com/${searchType}s/search.json?q=${value}&include_over_18=on`
+      `https://www.reddit.com/${searchType}s/search.json?q=${value}&include_over_18=${sfw}`
     );
 
     setSubReddits(
